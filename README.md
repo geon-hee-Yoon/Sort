@@ -131,19 +131,20 @@
 			int[] a= {5,1,3,2,4};
 			
 			for(int i=1;i<a.length;i++) {
-				int standard=a[i];
-				int aux=i-1;
+				int j=a[i];
+				int k=i-1;
 				
-				while (aux >=0 && standard<a[aux]) {
-					a[aux+1]=a[aux];
-					aux--;
+				while (k >=0 && j<a[k]) {
+					a[k+1]=a[k];
+					k--;
 				}
-				a[aux+1]=standard; //기준값 저장
+				a[k+1]=j; //기준값 저장
 			}
 			printSort(a);
 		}
 		
 	}
+
 
 ### 시간복잡도
 
