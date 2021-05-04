@@ -173,15 +173,15 @@
 			int[]a= {5,1,4,2,3};
 			int n=a.length;
 			
-			for(int h=n/2; h>0;h/=2) {
-				for(int i=h;i<n;i++) {
+			for(int g=n/2; g>0;g/=2) {
+				for(int i=g;i<n;i++) {
 					int j;
 					int temp=a[i];
 				
-					for(j=i-h;j>=0 && a[j]>temp;j-=h) {
-						a[j+h]=a[j];
+					for(j=i-g;j>=0 && a[j]>temp;j-=g) {
+						a[j+g]=a[j];
 					}
-					a[j+h]=temp;
+					a[j+g]=temp;
 				}
 			}
 			for(int i=0;i<a.length;i++) {
@@ -189,6 +189,7 @@
 			}
 		}
 	}
+
 
 ### 시간복잡도
 
